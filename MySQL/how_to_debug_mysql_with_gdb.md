@@ -1,4 +1,4 @@
-1. Change permission
+#### 1. Change permission
 
 ```Shell
 $ sudo bash
@@ -6,10 +6,11 @@ $ sudo bash
 ```
 
 If you want to maintain the configuration when the server is restarted, change `sysctl.d` file.
+You have to change `kernel.yama.ptrace_scope=1` to `kernel.yama.ptrace_scope=0`.
 
 ```Shell
-cd /etc/sysctl.d
-vi 10-ptrace.conf
+$ cd /etc/sysctl.d
+$ vi 10-ptrace.conf
 ```
 
 ```Shell
@@ -40,7 +41,7 @@ vi 10-ptrace.conf
 kernel.yama.ptrace_scope = 1 ############### Change to 0!!!! ##########
 ```
 
-2. Check process id of MySQL
+#### 2. Check process id of MySQL
 
 ```Shell
 $ ps -ef | grep mysql
@@ -51,7 +52,7 @@ vldb     69809 66216  0 03:24 pts/1    00:00:00 grep --color=auto mysql
 
 ```
 
-3. Execute GDB and attach pid of MySQL (In this case, `69720`)
+#### 3. Execute GDB and attach pid of MySQL (In this case, `69720`)
 
 ```Shell
 root@vldb:~# gdb
