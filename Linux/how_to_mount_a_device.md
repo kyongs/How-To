@@ -73,5 +73,7 @@ $ sudo chown -R yourUsername:yourUsername test_log
 6. Check the mounted devices.
 
 ```
+$ df -h
+
 /dev/sdb1       234G   61M  222G   1% /home/vldb/log-data
 ```
