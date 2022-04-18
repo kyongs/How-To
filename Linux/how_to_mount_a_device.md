@@ -75,5 +75,5 @@ $ sudo chown -R yourUsername:yourUsername test_log
 ```
 $ df -h
 
-/dev/sdb1       234G   61M  222G   1% /home/vldb/log-data
+/dev/sdb1       234G   61M  222G   1% /home/vldb/test_log
 ```
