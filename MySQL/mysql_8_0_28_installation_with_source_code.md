@@ -7,7 +7,7 @@ This document is based on Ubuntu 18.04, MySQL 8.0.28
 
 ---
 
-```shell
+```bash
 $ sudo apt-get install libreadline7
 $ sudo apt-get install libaio1 libaio-dev
 $ sudo apt-get install build-essential cmake libncurses5 libncurses5-dev bison
@@ -22,7 +22,7 @@ $ sudo apt-get install pkg-config
 
 1. Group, user configuration
 
-```shell
+```bash
 $ sudo groupadd mysql
 $ sudo useradd -r -g mysql -s /bin/false mysql
 ```
@@ -31,7 +31,7 @@ $ sudo useradd -r -g mysql -s /bin/false mysql
 
 2. Download the source code from [MySQL download URL.](https://dev.mysql.com/downloads/mysql/) (**Select OS**: Source Code, **Select OS Version**: All Operating Systems)
 
-```shell
+```bash
 $ wget https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.28.tar.gz
 ```
 
@@ -39,7 +39,7 @@ $ wget https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.28.tar.gz
 
 3. Unzip the `tar.gz` file and make the build file inside the source code. Follow the error message if the boost file does not exist in your MySQL directory. <br/> You would have to add `-DWITH` option and `-DDOWNLOAD` option with the `cmake` operation. I executed the `make` command by allocating 16 CPUs by `-j16` option. This is optional. (It will take much time if you get rid of this option, though.)
 
-```shell
+```bash
 $ tar zxvf mysql-8.0.28.tar.gz
 $ cd mysql-8.0.28
 $ mkdir bld
@@ -62,13 +62,13 @@ $ ./bin/mysqld --initialize --user=mysql --datadir=/home/{usr_name}/test-data --
 
 5. Set password. Run the MySQL Server with `--skip-grant-tables` command. You can check with `ps -ef | grep mysql` command if MySQL server is operating.
 
-```
+```bash
 $ ./bin/mysqld_safe --skip-grant-tables --datadir=/home/{usr_name}/test-data
 ```
 
 on the other terminal window or tab (location: /usr/local/mysql)
 
-```shell
+```bash
 # check mysql if it is running correctly
 $ ps -ef | grep mysql
 
@@ -92,7 +92,7 @@ mysql> quit
 
 6. Open `.bashrc` and add MySQL installation path and adjust the modification.
 
-```shell
+```bash
 $ vi ~/.bashrc
 
 export PATH=/usr/local/mysql:$PATH
@@ -105,7 +105,7 @@ $ source ~/.bashrc
 
 7. Create `my.cnf` file. Change `/path/to/datadir/` to your local mysql data directory. In my case, it is `/home/vldb/datadir`. This file should be located at `usr/local/mysql/my.cnf`.
 
-```shell
+```bash
 $ vi my.cnf
 
 #
@@ -161,7 +161,7 @@ innodb_flush_method=O_DIRECT
 
 8. Shut down the MySQL server and restart it with `my.cnf` file.
 
-```shell
+```bash
 $ ./bin/mysqladmin -uroot -p1234 shutdown
 $ ./bin/mysqld_safe --defaults-file=/usr/local/mysql/my.cnf
 ```
