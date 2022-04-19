@@ -1,7 +1,5 @@
 ## Build and Install the MySQL source code (8.0)
 
----
-
 This document is based on Ubuntu 18.04, MySQL 8.0.28
 <br/>
 
@@ -22,16 +20,16 @@ $ sudo apt-get install pkg-config
 
 ---
 
-1. Group, user configuration
+#### 1. Group, user configuration
 
 ```shell
 $ sudo groupadd mysql
-$ useradd -r -g mysql -s /bin/false mysql
+$ sudo useradd -r -g mysql -s /bin/false mysql
 ```
 
 <br/>
 
-2. Download the source code from [MySQL download URL.](https://dev.mysql.com/downloads/mysql/) (Select OS: Source Code, Select OS Version: All Operating Systems)
+#### 2. Download the source code from [MySQL download URL.](https://dev.mysql.com/downloads/mysql/) (**Select OS**: Source Code, **Select OS Version**: All Operating Systems)
 
 ```shell
 $ wget https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.28.tar.gz
@@ -39,23 +37,21 @@ $ wget https://dev.mysql.com/get/Downloads/MySQL-8.0/mysql-8.0.28.tar.gz
 
 <br/>
 
-3. Unzip the `tar.gz` file and make the build file inside source code. If boost file doesn't exist in your mysql directory, follow the error message. You would have to add `-DWITH` option and `-DDOWNLOAD` option with the `cmake` operation. <br/>
-   I executed the `make` command with allocating 16 CPUs by `-j16` option. This is optional. (It will take a lot of time if you get rid of this option, though.)
+#### 3. Unzip the `tar.gz` file and make the build file inside the source code. Follow the error message if the boost file does not exist in your MySQL directory. You would have to add `-DWITH` option and `-DDOWNLOAD` option with the `cmake` operation. I executed the `make` command by allocating 16 CPUs by `-j16` option. This is optional. (It will take much time if you get rid of this option, though.)
 
 ```shell
 $ tar zxvf mysql-8.0.28.tar.gz
-$ cd mysql-8.0.28.tar.gz
+$ cd mysql-8.0.28
 $ mkdir bld
 $ cd bld
 $ sudo cmake ..
 # if no boost file: $ sudo cmake .. -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/home/{usr_name}/mysql-8.0.28/bld
-$ sudo make -j16 install
+~/mysql8-0.28/bld $ sudo make -j16 install
 ```
 
 <br/>
 
-4. MySQL makes the base directory in `/usr/local/mysql` by default. In this case, I will make the data directory(`test-data`) on `home` directory.<br/>
-   Initialize MySQL with following command.
+#### 4. MySQL makes the base directory in `/usr/local/mysql` by default. In this document, I will make the data directory(`test-data`) at the `home` directory.Initialize MySQL with the following command.
 
 ```shell
 $ cd /usr/local/mysql
@@ -64,15 +60,18 @@ $ ./bin/mysqld --initialize --user=mysql --datadir=/home/{usr_name}/test-data --
 
 <br/>
 
-5. Set password
+#### 5. Set password. Run the MySQL Server with `--skip-grant-tables` command. You can check with `ps -ef | grep mysql` command if MySQL server is operating.
 
 ```
 $ ./bin/mysqld_safe --skip-grant-tables --datadir=/home/{usr_name}/test-data
 ```
 
-another window (location: /usr/local/mysql)
+on the other terminal window or tab (location: /usr/local/mysql)
 
 ```shell
+# check mysql if it is running correctly
+$ ps -ef | grep mysql
+
 $ ./bin/mysql -uroot
 
 mysql> use mysql;
@@ -82,7 +81,7 @@ mysql> quit
 
 
 $ ./bin/mysql -uroot -p
-# just enter
+# just press <enter> because we set the root password to 'null' at the forward process.
 mysql> ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY '1234';
 mysql> SET PASSWORD FOR 'root'@'localhost' = '1234';
 mysql> flush privileges;
@@ -91,7 +90,7 @@ mysql> quit
 
 <br/>
 
-6. Open `.bashrc` and add MySQL installation path and adjust the modification.
+#### 6. Open `.bashrc` and add MySQL installation path and adjust the modification.
 
 ```shell
 $ vi ~/.bashrc
@@ -104,7 +103,7 @@ $ source ~/.bashrc
 
 <br/>
 
-7. Create `my.cnf` file. Change `/path/to/datadir/` to your local mysql data directory. In my case, it is `/home/vldb/datadir`. This file should be located at `usr/local/mysql/my.cnf`.
+#### 7. Create `my.cnf` file. Change `/path/to/datadir/` to your local mysql data directory. In my case, it is `/home/vldb/datadir`. This file should be located at `usr/local/mysql/my.cnf`.
 
 ```shell
 $ vi my.cnf
@@ -160,7 +159,7 @@ innodb_flush_method=O_DIRECT
 
 <br/>
 
-8. Shut down the MySQL server and restart it with `my.cnf` file.
+#### 8. Shut down the MySQL server and restart it with `my.cnf` file.
 
 ```shell
 $ ./bin/mysqladmin -uroot -p1234 shutdown
