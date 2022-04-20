@@ -77,3 +77,9 @@ $ df -h
 
 /dev/sdb1       234G   61M  222G   1% /home/vldb/test_log
 ```
+
+Etc) Unmount
+
+```
+$ sudo umount /dev/sdc1
+```
