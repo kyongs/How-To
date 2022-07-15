@@ -15,6 +15,8 @@ Device     Boot Start       End   Sectors   Size Id Type
 
 ```
 
+<br/>
+
 2. If needed, create partition.
    (Enter `n` to create new partition, then `w` to write the changes you've made to disk.)
 
@@ -29,7 +31,7 @@ Be careful before using the write command.
 Command (m for help): n
 ...
 ```
-
+<br/>
 3. Create a filesystem (ex. EXT4) on the partition.
 
 ```
@@ -54,6 +56,7 @@ vldb@vldb:~$
 
 ```
 
+<br/>
 4. Mount data device. (Below is the example.)
 
 ```
@@ -62,6 +65,7 @@ $ sudo mount /dev/nvme0n1p1 test_data
 $ sudo chown -R yourUsername:yourUsername test_data
 ```
 
+<br/>
 5. Mount log device.
 
 ```
@@ -70,6 +74,7 @@ $ sudo mount /dev/sdb1 -o nobarrier test_log
 $ sudo chown -R yourUsername:yourUsername test_log
 ```
 
+<br/>
 6. Check the mounted devices.
 
 ```
