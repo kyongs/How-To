@@ -12,7 +12,10 @@
 - [Linux](https://github.com/kyongs/How-To/tree/main/Linux) ⛵️
   - [dpkg error](https://github.com/kyongs/How-To/blob/main/Linux/dpkg_error.md)
   - [How to mount a device](https://github.com/kyongs/How-To/blob/main/Linux/how_to_mount_a_device.md)
+  - [How to Kill a Process](https://github.com/kyongs/How-To/blob/main/Linux/how_to_kill_process.md)
   - [How to create perf flame graph](https://github.com/kyongs/How-To/blob/main/Linux/perf.md)
+  - [Useful GDB Commands](https://github.com/kyongs/How-To/blob/main/Linux/useful_gdb_commands.md)
+  - [Useful vi Commands](https://github.com/kyongs/How-To/blob/main/Linux/vi_command.md)
   
  
   
