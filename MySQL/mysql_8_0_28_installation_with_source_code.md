@@ -14,6 +14,10 @@ $ sudo apt-get install build-essential cmake libncurses5 libncurses5-dev bison
 $ sudo apt-get install gcc-8 g++-8
 $ sudo apt-get install libssl-dev
 $ sudo apt-get install pkg-config
+
+# for mysql8.0.31, you have to install libboost-dev
+$ sudo apt-get install libboost-dev
+
 ```
 
 ### Build and Install
@@ -45,13 +49,14 @@ $ cd mysql-8.0.28
 $ mkdir bld
 $ cd bld
 $ sudo cmake ..
-# if no boost file: $ sudo cmake .. -DDOWNLOAD_BOOST=1 -DWITH_BOOST=/home/{usr_name}/mysql-8.0.28/bld
+# if no boost file: 
+# $ sudo cmake .. -DDOWNLOAD_BOOST=1 -DWITH_BOOST={path_to_mysql_code}/mysql-8.0.28/bld
 $ sudo make -j16 install
 ```
 
 <br/>
 
-4. MySQL makes the base directory in `/usr/local/mysql` by default. In this document, I will make the data directory(`test-data`) at the `home` directory.Initialize MySQL with the following command.
+4. MySQL makes the base directory in `/usr/local/mysql` by default. In this document, I will make the data directory(`test-data`) at the `home` directory. Initialize MySQL with the following command.
 
 ```shell
 $ cd /usr/local/mysql
