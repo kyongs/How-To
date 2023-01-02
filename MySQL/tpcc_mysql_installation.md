@@ -25,7 +25,7 @@ $ cd tpcc-mysql/src
 $ make
 ```
 
-3. Create `tpcc` database and tables
+3. Create `tpcc` database and tables. MySQL server must be running.
 
 ```bash
 cd /usr/local/mysql
