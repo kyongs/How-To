@@ -11,7 +11,7 @@
   - [tpcc-mysql installation](https://github.com/kyongs/How-To/blob/main/MySQL/tpcc_mysql_installation.md)
   
 - [Linux](https://github.com/kyongs/How-To/tree/main/Linux) ⛵️
-- [cscope](https://github.com/kyongs/How-To/blob/main/Linux/cscope.md)
+  - [cscope](https://github.com/kyongs/How-To/blob/main/Linux/cscope.md)
   - [dpkg error](https://github.com/kyongs/How-To/blob/main/Linux/dpkg_error.md)
   - [How to mount a device](https://github.com/kyongs/How-To/blob/main/Linux/how_to_mount_a_device.md)
   - [How to Kill a Process](https://github.com/kyongs/How-To/blob/main/Linux/how_to_kill_process.md)
