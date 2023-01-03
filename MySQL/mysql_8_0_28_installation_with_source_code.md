@@ -56,11 +56,11 @@ $ sudo make -j16 install
 
 <br/>
 
-4. MySQL makes the base directory in `/usr/local/mysql` by default. In this document, I will make the data directory(`test-data`) at the `home` directory. Initialize MySQL with the following command.
+4. MySQL makes the base directory in `/usr/local/mysql` by default. In this document, I will make the data directory(`test-data`) at the `home` directory. Initialize MySQL with the following command. (ex. path to datadir = /home/vldb/test-data)
 
 ```shell
 $ cd /usr/local/mysql
-$ ./bin/mysqld --initialize --user=mysql --datadir=/home/{usr_name}/test-data --basedir=/usr/local/mysql
+$ ./bin/mysqld --initialize --user=mysql --datadir={path/to/datadir} --basedir=/usr/local/mysql
 ```
 
 <br/>
@@ -68,7 +68,7 @@ $ ./bin/mysqld --initialize --user=mysql --datadir=/home/{usr_name}/test-data --
 5. Set password. Run the MySQL Server with `--skip-grant-tables` command. You can check with `ps -ef | grep mysql` command if MySQL server is operating.
 
 ```bash
-$ ./bin/mysqld_safe --skip-grant-tables --datadir=/home/{usr_name}/test-data
+$ ./bin/mysqld_safe --skip-grant-tables --datadir={path/to/datadir}
 ```
 
 on the other terminal window or tab (location: /usr/local/mysql)
@@ -108,7 +108,7 @@ $ source ~/.bashrc
 
 <br/>
 
-7. Create `my.cnf` file. Change `/path/to/datadir/` to your local mysql data directory. In my case, it is `/home/vldb/datadir`. This file should be located at `usr/local/mysql/my.cnf`.
+7. Create `my.cnf` file. Change `/path/to/datadir/` to your local mysql data directory. In my case, it is `/home/vldb/test-data`. This file should be located at `usr/local/mysql/my.cnf`.
 
 ```bash
 $ vi my.cnf
