@@ -8,7 +8,7 @@ Fill SSD with sequential data twice. This will guarantee all available memory is
 
 > #### **Note**
 >
-> Be aware of not writing partition in the _device ID_. <br>
+> Do not write partition in the _device ID_ (ex. device ID: sda, partition: sda1)<br/>
 > This command will initialze the whole SSD.
 
 
