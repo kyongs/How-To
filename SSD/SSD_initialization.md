@@ -9,7 +9,8 @@ Fill SSD with sequential data twice. This will guarantee all available memory is
 > #### **Note**
 >
 > Do not write partition in the _device ID_ (ex. device ID: sda, partition: sda1)<br/>
-> This command will initialze the whole SSD.
+> This command will initialze the whole SSD. <br/>
+> Unmount the SSD before you execute `dd` command.
 
 
 ```
