@@ -19,3 +19,8 @@ scp [file_name] [remote_user_name]@[remote_ip]:[location]
 scp [remote_user_name]@[remote_ip]:[location] [local_location]
 # ex) scp root@192.168.159.129:tmp/testclient/testfile /tmp
 ```
+
+3. shutdown
+```bash
+sudo shutdown -h now
+```
