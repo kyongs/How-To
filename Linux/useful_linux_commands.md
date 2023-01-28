@@ -1,4 +1,4 @@
-### Useful Linux Command
+### Useful Linux Commands
 
 1. tar.gz zip unzip
 ```bash

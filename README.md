@@ -1,6 +1,7 @@
 # List 
 
 
+
 - [MySQL](https://github.com/kyongs/How-To/tree/main/MySQL)👻
   - [How to change transaction percentage in mysql-tpcc](https://github.com/kyongs/How-To/blob/main/MySQL/how_to_change_transaction_percentage_in_mysql_tpcc.md)
   - [How to debug MySQL with gdb in Linux](https://github.com/kyongs/How-To/blob/main/MySQL/how_to_debug_mysql_with_gdb.md)
@@ -20,7 +21,9 @@
    - [Useful Linux Commands](https://github.com/kyongs/How-To/blob/main/Linux/useful_linux_commands.md)
   - [Useful vi Commands](https://github.com/kyongs/How-To/blob/main/Linux/vi_command.md)
   
- 
+ -[Github](https://github.com/kyongs/How-To/tree/main/Github)
+  - [How to cancel git add/commit/push](https://github.com/kyongs/How-To/blob/main/Github/how_to_cancel_git_add_commit_push.md)
+  - [Upload large files](https://github.com/kyongs/How-To/blob/main/Github/LFS.md)
   
 - [SSD](https://github.com/kyongs/How-To/tree/main/SSD) 💻
   - [SSD initialization](https://github.com/kyongs/How-To/blob/main/SSD/SSD_initialization.md)
