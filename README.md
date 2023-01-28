@@ -21,9 +21,10 @@
    - [Useful Linux Commands](https://github.com/kyongs/How-To/blob/main/Linux/useful_linux_commands.md)
   - [Useful vi Commands](https://github.com/kyongs/How-To/blob/main/Linux/vi_command.md)
   
- -[Github](https://github.com/kyongs/How-To/tree/main/Github)
-  - [How to cancel git add/commit/push](https://github.com/kyongs/How-To/blob/main/Github/how_to_cancel_git_add_commit_push.md)
-  - [Upload large files](https://github.com/kyongs/How-To/blob/main/Github/LFS.md)
+ - [Github](https://github.com/kyongs/How-To/tree/main/Github)
+    - [How to cancel git add/commit/push](https://github.com/kyongs/How-To/blob/main/Github/how_to_cancel_git_add_commit_push.md)
+    - [Upload large files](https://github.com/kyongs/How-To/blob/main/Github/LFS.md)
   
+
 - [SSD](https://github.com/kyongs/How-To/tree/main/SSD) 💻
   - [SSD initialization](https://github.com/kyongs/How-To/blob/main/SSD/SSD_initialization.md)
