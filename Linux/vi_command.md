@@ -15,3 +15,5 @@
  - `dd` : delete one line where current cursor exists
  - `x`: delete one character where current cursor exists
 
+4. Replace string
+- `:%s/string1/string2/g` : replace string1 to string2
