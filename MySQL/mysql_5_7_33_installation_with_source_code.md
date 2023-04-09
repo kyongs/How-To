@@ -51,7 +51,7 @@ $ sudo make -j16 install
 ```shell
 $ cd /usr/local/mysql
 $ ./bin/mysqld --initialize --user=mysql --datadir=/path/to/datadir --basedir=/path/to/basedir
-# $ ./bin/mysqld --initialize --user=mysql --datadir=/home/vldb/test-data --basedir=/usr/local/mysql
+# $ ./bin/mysqld --initialize --user=mysql --datadir=/home/vldb/test_data --basedir=/usr/local/mysql
 ```
 
 <br/>
