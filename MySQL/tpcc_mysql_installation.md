@@ -29,7 +29,10 @@ $ make
 
 ```bash
 cd /usr/local/mysql
+# start MySQL Server
+./bin/mysqld_safe --defaults-file=/usr/local/mysql/my.cnf
 
+# create TPC-C tables
 ./bin/mysql -u root -p -e "CREATE DATABASE tpcc;"
 ./bin/mysql -u root -p tpcc < /home/vldb/tpcc-mysql/create_table.sql
 ./bin/mysql -u root -p tpcc < /home/vldb/tpcc-mysql/add_fkey_idx.sql
