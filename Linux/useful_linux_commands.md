@@ -24,3 +24,10 @@ scp [remote_user_name]@[remote_ip]:[location] [local_location]
 ```bash
 sudo shutdown -h now
 ```
+
+4. How to change the "\n" in a text file to a new line in Linux
+
+```bash
+sed 's/\\n/\n/g' [file name]
+# ex) sed 's/\\n/\n/g' innodb-status.txt
+```
