@@ -87,7 +87,7 @@ boost_1_59_0.tar.gz                   60%[======================================
 
 4. Execute cmake command.
 ```shell
-vldb@vldb:~/mysql-5.7.33$ cmake -DWITH_BOOST=/home/vldb/mysql-5.7.33/boost -DCMAKE_INSTALL_PREFIX=/use/local/mysql
+vldb@vldb:~/mysql-5.7.33$ cmake -DWITH_BOOST=/home/vldb/mysql-5.7.33/boost -DCMAKE_INSTALL_PREFIX=/usr/local/mysql
 # format: cmake -DWITH_BOOST=/path/to/boost -DCMAKE_INSTALL_PREFIX=/path/to/dir
 ```
 
